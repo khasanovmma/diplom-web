@@ -1,0 +1,45 @@
+{
+  "name": "sanjargulp",
+  "version": "1.0.0",
+  "description": "Gulp for daily usage by Sanjar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fayzullaev99/gulp.git"
+  },
+  "keywords": [
+    "gulp",
+    "nodejs",
+    "npm"
+  ],
+  "author": "Sanjar <sanjarfayzullaev99@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fayzullaev99/gulp/issues"
+  },
+  "homepage": "https://github.com/Fayzullaev99/gulp#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.10",
+    "@babel/preset-env": "^7.13.10",
+    "babel-preset-minify": "^0.5.1",
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-load-plugins": "^2.0.6",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-ttf2woff": "^1.1.1",
+    "gulp-webp": "^4.0.1",
+    "node-sass": "^5.0.0"
+  },
+  "dependencies": {
+    "gulp-include": "^2.4.1",
+    "gulp-rename": "^2.0.0"
+  }
+}

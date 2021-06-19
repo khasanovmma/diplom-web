@@ -1,0 +1,74 @@
+.contact{
+    margin-bottom: 20px;
+    &-block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @include media($xl){
+            display: block;
+        }
+    }
+    &__images{
+        width: 65%;
+        height: 385px;
+        @include media($xl){
+            width: 100%;
+            margin-bottom: 15px;
+        }
+    }
+    &__img{
+        height: 100%;
+        width: 100%;
+    }
+    &__info{
+        width: 35%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20px;
+        @include media($xl){
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+    &__input{
+        height: 60px;
+        width: 100%;
+        font-family: $mont;
+        font-size: 18px;
+        padding: 10px;
+        border: none;
+        background: #FFFFFF;
+        box-shadow: 2px -2px 15px rgba(103, 135, 217, 0.12);
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    &__textarea{
+        border: none;
+        resize: none;
+        background: #FFFFFF;
+        padding: 10px;
+        width: 100%;
+        box-shadow: 2px -2px 15px rgba(103, 135, 217, 0.12);
+        font-family: $mont;
+        font-size: 18px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    &__button{
+        height: 60px;
+        font-family: $mont;
+        font-size: 18px;
+        padding: 5px;
+        border: none;
+        background: var(--blue);
+        box-shadow: 2px -2px 15px rgba(103, 135, 217, 0.12);
+        border-radius: 1px;
+        margin-bottom: 15px;
+    }
+    &__link{
+        font-family: $mont;
+        font-size: 18px;
+        color: #fff;
+        text-decoration: none;
+    }
+}

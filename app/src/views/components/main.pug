@@ -1,0 +1,79 @@
+main.main 
+ .container 
+  .main-block 
+   .main-block__left
+    .main-block__left__title 
+     i.fal.main-block__left__icon
+     h2.title yangiliklar 
+    .main-block__info 
+     h5.main-block__title diqqat tanlov
+     .main-block__data 
+      p.main-block__type yangiliklar
+      p.main-block__date 20-06-2021
+      p.main-block__time 12:30
+     p.main-block__text Yunesko ishlar bo’yicha O’zbekiston Respublikasi Milliy komissiyasining ma’lumotiga ko’ra 2021-yil uchun “Barchni qarab oluvchi  (inklyuziv) masofaviy va qaramli savodxonlik” mavzusiga bag’ishlangan.
+     button.link__hover.main-block__btn ba’tafsil
+    .main-block__info 
+     h5.main-block__title diqqat tanlov
+     .main-block__data 
+      p.main-block__type yangiliklar
+      p.main-block__date 20-06-2021
+      p.main-block__time 12:30
+     p.main-block__text Yunesko ishlar bo’yicha O’zbekiston Respublikasi Milliy komissiyasining ma’lumotiga ko’ra 2021-yil uchun “Barchni qarab oluvchi  (inklyuziv) masofaviy va qaramli savodxonlik” mavzusiga bag’ishlangan.
+     button.link__hover.main-block__btn ba’tafsil
+   .main-block__right 
+    .main-block__right__title
+     i.fal.main-block__right__icon
+     h4.title Muhim sanalar
+    .main-block__right__texts 
+     each text in [{date:'°  1 yanvar', info:'– Xalqaro tinchlik kuni'}, {date:'°  8 yanvar', info:'– Prokuratura xodimlari kuni'}, {date:'°  14 yanvar'   ,info:'– Vatan himoyachilari kuni'},  {date:'°  19 yanvar'   ,info:'– Mahmudxo‘ja Behbudiy tug‘ilgan kun (1875)'},  {date:'°  27 yanvar'   ,info:'– Xalqaro bojxona kuni'},  {date:'°  30 yanvar'   ,info:'– O‘zbekiston Respublikasi birinchi Prezidenti Islom'},  {date:'° '             ,info: 'Abdug‘aniyevich Karimov tavallud topgan kun (1938)'},  {date:'°  9 fevral'    ,info:'– Alisher Navoiy tug‘ilgan kun (1441)'},  {date:'°  14 fevral'   ,info:'– Zahiriddin Muhammad Bobur tug‘ilgan kun (1483)'},  {date:'°  21 fevral'   ,info:'– Xalqaro ona tili kuni'},  {date:'°  1 mart'      ,info:'– O‘zbekiston xalq shoiri Zulfiya tug‘ilgan kun (1915)'},  {date:'°  2 mart'      ,info:'– O‘zbekiston Respublikasi Birlashgan Millatlar Tashkiloti (BMT)ga a’zo bo‘lgan kun'},  {date:'°  22 mart'     ,info:'– Mirzo Ulug‘bek tug‘ilgan kun'},  {date:'°  22 mart'     ,info:'– Xalqaro obi-hayot kuni'},  {date:'°  27 mart'     ,info:'– Xalqaro teatr kuni'},  {date:'°  1 aprel'     ,info:'– Xalqaro kulgi va hazil kuni'},  {date:'°  7 aprel'     ,info:'– Jahon salomatlik kuni'},  {date:'°  12 aprel'    ,info:'– Jahon aviatsiya va kosmonavtikasi kuni'},  {date:'°  26 aprel'    ,info:'– Xalqaro intellektual mulk kuni'},  {date:'°  3 may'       ,info:'– Jahon matbuot erkinligi kuni (1993)'},  {date:'°  15 may'      ,info:'– Xalqaro oila kuni'},  {date:'°  18 may'      ,info:'– Xalqaro muzeylar kuni'},  {date:'°  31 may'      ,info:'– Xalqaro kashandalikka qarshi kurash kuni'},  {date:'°  1 iyun'      ,info:'– Xalqaro bolalarni himoya qilish kuni'},  {date:'°  5 iyun'      ,info:'– Jahon atrof-muhitni muhofaza qilish kuni'},  {date:'°  14 iyun'     ,info:'– Xalqaro donorlar kuni'},  {date:'°  27 iyun'     ,info:'– Matbuot va ommaviy axborot vositalari xodimlari kuni (1993)'},  {date:'°  2 iyul'      ,info:'– O‘zbekiston Respublikasi Davlat gerbi qabul qilingan kun (1992)'},  {date:'°  20 iyul'     ,info:'– Xalqaro shaxmat kuni'},  {date:'°  23 iyul'     ,info:'– Xalqaro olimpiada kuni'},  {date:'° '             , info:'– Xalqaro yoshlar kuni'},  {date:'°  31 avgust'   ,info:'– O‘zbekistonda qatag‘on qurbonlarini yod etish kuni (2001)'},  {date:'°  2 sentyabr'  ,info:'– O‘zbekiston Respublikasi birinchi Prezidenti Islom Abdug‘aniyevich Karimovni xotirlash kuni (2016)'},  {date:'°  8 sentyabr'  ,info:'– Xalqaro savodxonlik kuni (1966)'},  {date:'°  16 sentyabr' ,info:'– Xalqaro ozon qatlamini muhofaza qilish kuni'},  {date:'°  21 sentyabr' ,info:'– Xalqaro osoyishtalik kuni'},  {date:'°  27 sentyabr' ,info:'– Xalqaro sayyohlik kuni'},  {date:'°  6 oktyabr'   ,info:'– Butunjahon yashash joylarini muhofaza qilish kuni'},  {date:'°  18 oktyabr'  ,info:'– Samarqand shahri kuni'},  {date:'°  21 oktyabr'  ,info:'– O‘zbek tiliga davlat tili maqomi berilgan kun (1989)'},  {date:'°  25 oktyabr'  ,info:'– O‘zbekiston Respublikasi Ichki ishlar idoralari xodimlari kuni'},  {date:'°  14 noyabr'   ,info:'– Xalqaro qandli diabetga qarshi kurash kuni'},  {date:'°  17 noyabr'   ,info:'– Samarqandda Imom Moturidiy maqbarasi ochilgan kun'},  {date:'°  18 noyabr'   ,info:'– O‘zbekiston Respublikasi Davlat bayrog‘i qabul qilingan kun'},  {date:'°  1 dekabr'    ,info:'– Jahon OITS (SPID)ga qarshi kurashish kuni'},  {date:'°  3 dekabr'    ,info:'– Xalqaro nogironlar kuni'},  {date:'°  10 dekabr'   ,info:'– O‘zbekiston Respublikasi Davlat madhiyasi qabul qilingan kun.'}]
+      p.main-block__right__text= text.date 
+       span.main-block__right__span= text.info 
+  .main-slider 
+   button(data-target="mainprev").main-slider__prev
+    i.fal.main-slider__prev-icon
+   button(data-target="mainnext").main-slider__next
+    i.fal.main-slider__next-icon
+   .main-slider__inner 
+    .main-slider__item.active
+     .main-slider-block
+      .main-slider__div 
+       img(src="images/main_1.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_2.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_3.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_4.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_5.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_6.webp", alt="afrosiyob").main-slider__img
+    .main-slider__item
+     .main-slider-block
+      .main-slider__div 
+       img(src="images/main_7.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_8.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_9.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_10.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_11.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_12.webp", alt="afrosiyob").main-slider__img
+    .main-slider__item
+     .main-slider-block
+      .main-slider__div 
+       img(src="images/main_13.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_14.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_15.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_16.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_3.webp", alt="afrosiyob").main-slider__img
+      .main-slider__div 
+       img(src="images/main_1.webp", alt="afrosiyob").main-slider__img

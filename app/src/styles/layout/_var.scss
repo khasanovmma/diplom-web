@@ -1,0 +1,47 @@
+$mont:'Montserrat';
+$robo:'Roboto';
+$com:'Comfortaa';
+$grap:'Graphik';
+:root{
+    --sky:#6195D3;
+    --blue:#6889FD;
+    --black:#646464;
+    --wheat:#E5E5E5;
+}
+$xxl:1400;
+$xl: 1200;
+$lg: 992;
+$md: 768;
+$sm:576;
+@mixin media($size) {
+    @media(max-width:#{$size}px) {
+        @content
+    }
+}
+
+$sizes:(
+    1400:1320,
+    1200:1140,
+    992:960,
+    768:720,
+    576:540,
+    0:0
+);
+
+@each $breakPoint, $containerSize in $sizes{
+    @if $breakPoint == 0 {
+        .container{
+            width: 100%;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+    }@else{
+        @media(min-width:#{$breakPoint}px){
+            .container{
+                max-width: #{$containerSize}px;
+            }
+        }
+    }
+}

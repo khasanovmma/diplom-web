@@ -1,0 +1,131 @@
+.kafedra{
+    &__block{
+        padding: 30px;
+        background: #FFFFFF;
+        box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.08);
+    }
+    &__title{
+        font-family: $mont;
+        font-size: 36px;
+        text-align: center;
+        color: var(--black);
+        margin-bottom: 30px;
+    }
+    &__info__title{
+        font-family: $mont;
+        font-size: 20px;
+        color: var(--black);
+        margin-bottom: 20px;
+    }
+    &__text{
+        font-family: $mont;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--black);
+        margin-bottom: 20px;
+    }
+    &__span{
+        color: var(--blue);
+        font-weight: 600;
+    }
+    &__dirs{
+        display: flex;
+        justify-content: space-between;
+        @include media($md){
+            display: block;
+        }
+    }
+    &__dir{
+        width: 48%;
+        display: flex;
+        flex-direction: column;        
+        @include media($md){
+            width: 100%;
+        }
+    }
+    &__dir-info{
+        padding: 30px;
+        background: white;
+        box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.08);
+        flex-grow: 1;
+        &__title{
+          font-family: $mont;
+          font-weight: 700;
+          line-height: 24px;
+          font-size: 20px;
+          color: var(--black);
+          margin-bottom: 20px;
+        }
+        &__list{
+            font-family: $mont;
+            font-weight: 700;
+            line-height: 24px;
+            font-size: 18px;
+            color: var(--black);
+            margin-bottom: 20px;
+        }
+    }
+}
+.statistic{
+    display: flex;
+    justify-content: space-between;   
+    @include media($md){
+        display: block;
+    }
+    &-block{
+        background: #fff;
+        padding: 50px;
+        flex-grow: 1;
+    }
+    &__learn{
+        text-align: center;
+    }
+    &__icon1{
+        font-size: 100px;
+        margin-bottom: 30px;
+        &::before{
+            content: "\f0c0";
+            color: var(--sky);
+        }
+        &::after{
+            content: "\10f0c0";
+            color: #F2C967;
+        }
+    }
+    &__icon2{
+        font-size: 100px;
+        margin-bottom: 30px;
+        &::before{
+            content: "\f501";
+            color: var(--sky);
+        }
+        &::after{
+            content: "\10f501";
+            color: #F2C967;
+        }
+    }
+    &__icon3{
+        font-size: 100px;
+        margin-bottom: 30px;
+        &::before{
+            content: "\f5f3";
+            color: var(--sky);
+        }
+        &::after{
+            content: "\10f5f3";
+            color: #F2C967;
+        }
+    }
+    &__text{
+        font-family: $mont;
+        font-size: 18px;
+        color: var(--black);
+        margin-bottom: 30px;
+    }
+    &__num{
+        font-family: $mont;
+        font-weight: 700;
+        font-size: 24px;
+        color: var(--blue);
+    }
+}

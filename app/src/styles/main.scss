@@ -1,0 +1,291 @@
+@import 'layout/var',
+        'layout/font',
+        'layout/header',
+        'components/slider',
+        'components/news',
+        'components/kafedra',
+        'components/content',
+        'components/contact',
+        'layout/footer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    background: var(--wheat);
+    scroll-behavior: smooth;
+}
+
+.title{
+    font-family: $mont;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--black);
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #E5E5E5;
+}
+.link__hover{
+    position: relative;
+    &:hover{
+        color: #ffae00f6;
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 0;
+        height: 2px;
+        background-color: #ffae00f6;
+        transition: width 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+ }
+@media (hover: hover) and (pointer: fine) {
+    .link__hover:hover::before{
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+}
+
+// Main
+
+.main{
+    margin-top: 60px;
+    &-block{
+        display: flex;
+        justify-content: space-around;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+        margin-top: 10px;
+        margin-bottom: 20px;
+        @include media($xl){
+            flex-direction: column;
+        }
+    }
+    &-block__left{
+        width: 48%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        &__title {
+            width: 100%;
+        }
+        @include media($xl){
+            width: 100%;
+        }
+    }
+    &-block__info{
+        padding: 35px 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        margin-bottom: 25px;
+        background: white;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
+        @include media($xl){
+            padding: 10px 15;
+            margin-bottom: 15px;
+        }
+    }
+    &-block__title{
+        font-family: $mont;
+        font-weight: 700;
+        font-size: 28px;
+        color: var(--black);
+        text-transform: uppercase;
+    }
+    &-block__data{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        margin: 15px 0;
+    }
+    &-block__type{
+        font-family: $mont;
+        color: #C4C4C4;
+        padding-right: 10px;
+        border-right: 1px solid #C4C4C4;
+        text-transform: capitalize;
+    }
+    &-block__date{
+        font-family: $mont;
+        color: #C4C4C4;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-right: 1px solid #C4C4C4;
+    }
+    &-block__time{
+        font-family: $mont;
+        color: #C4C4C4;
+        padding-left: 10px;
+        border-left: 1px solid #C4C4C4;
+    }
+    &-block__text{
+        font-family: $mont;
+        font-size: 18px;
+        line-height: 27px;
+        color: var(--black);
+        margin-bottom: 20px;
+    }
+    &-block__btn{
+        padding: 8px 25px;
+        background: var(--blue);
+        color: white;
+        font-family: $mont;
+        font-size: 18px;
+        border: none;
+    }
+    &-block__follows{
+        display: flex;
+        align-items: center;
+        &__icon{
+            margin-right: 15px;
+            font-size: 21px;
+            &::after{
+                content: "\f06e";
+            }
+        }
+        &__text{
+            font-family: $mont;
+            font-size: 18px;
+            color: var(--black);
+        }
+    }
+    &-block__right{
+        width: 48%;
+        @include media($xl){
+            width: 100%;
+        }
+        &__title{
+            // position: fixed;
+        }
+        &__icon{
+
+        }
+        &__texts{
+            height: 715px;
+            overflow-y: scroll;
+            padding: 20px;
+        }
+        &__text{
+            font-family: $mont;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--black);
+            margin-bottom: 15px;
+        }
+        &__span{
+            font-weight: 400;
+        }
+    }
+}
+
+// slider
+
+.main-slider{
+    position: relative;
+    width: 100%;
+    height: 650px;
+    margin: 60px auto 0;
+    overflow: hidden;
+    z-index: 1;
+    @include  media($xl) {
+        display: none;
+    }
+    &__inner{
+        height: 100%;
+        width: 100%;
+    };
+    &__item{    
+      position: absolute;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: 0.5s;
+      opacity: 0;
+      z-index: -1;
+    }
+    &__item.active{
+      z-index: 1;
+      opacity: 1;
+    }
+    &-block{
+        width: 100%;
+        height: 650px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        align-items: center;
+    }
+    &__div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__img{
+        object-fit: cover;
+    };
+    &__prev{
+        height: 100%;
+        width: 10%;
+        position: absolute;
+        top: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+        left: 0;
+        z-index: 10;
+        opacity: 0;
+        &:hover{
+            opacity: 1;
+        }
+
+        &-icon{
+            font-size: 40px;
+            color: var(--blue);
+            &::after{
+                content: "\f0a8";
+            }
+        }
+    };
+    &__next{
+        height: 100%;
+        width: 10%;
+        position: absolute;
+        top: 0;
+        background: transparent;
+        border: none;
+        outline: none;
+        right: 0;
+        z-index: 10;
+        opacity: 0;
+        &:hover{
+            opacity: 1;
+        }
+        &-icon{
+            font-size: 40px;
+            color: var(--blue);
+            &::after{
+                content: "\f0a9";
+            }
+        }
+    };
+}
+.left{
+    width: 800px;
+}
+.right{
+    width:300px
+}

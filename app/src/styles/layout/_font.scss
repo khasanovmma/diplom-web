@@ -1,0 +1,94 @@
+@font-face{
+    font-family: $mont;
+    src: url(../fonts/Montserrat-Bold.woff);
+    font-weight: 700;
+}
+@font-face{
+    font-family: $mont;
+    src: url(../fonts/Montserrat-Regular.woff);
+}
+@font-face{
+    font-family: $com;
+    src: url(../fonts/Comfortaa-Bold.woff);
+    font-weight: 700;
+}
+@font-face{
+    font-family: $com;
+    src: url(../fonts/Comfortaa-Regular.woff);
+}
+@font-face{
+    font-family: $robo;
+    src: url(../fonts/Roboto-Medium.woff);
+    font-weight: 500;
+}
+@font-face{
+    font-family: $robo;
+    src: url(../fonts/Roboto-Regular.woff);
+}
+@font-face{
+    font-family: 'Font Awesome 5 Pro';
+    src: url(../fonts/fa-light-300.woff);
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'Font Awesome 5 Pro';
+    src: url(../fonts/fa-regular-400.woff);
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'Font Awesome 5 Pro';
+    src: url(../fonts/fa-solid-900.woff);
+    font-weight: 900;
+}
+@font-face{
+    font-family: 'Font Awesome 5 Brands';
+    src: url(../fonts/fa-brands-400.woff);
+    font-weight: 400;
+}
+@font-face{
+    font-family: 'Font Awesome 5 Duotone';
+    src: url(../fonts/fa-duotone-900.woff);
+    font-weight: 900;
+}
+.fa,
+.fas,
+.far,
+.fal,
+.fad,
+.fab {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1; 
+}
+.fab {
+    font-family: 'Font Awesome 5 Brands';
+    font-weight: 400; 
+}
+.fad {
+    position: relative;
+    font-family: 'Font Awesome 5 Duotone';
+    font-weight: 900; 
+}
+
+.fad:before {
+    position: absolute;
+    opacity: 1;}
+.fad:after {
+    opacity: 0.4;
+}
+.fal {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 300; 
+}
+.far {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 400; 
+}
+.fas {
+    font-family: 'Font Awesome 5 Pro';
+    font-weight: 900; 
+}
