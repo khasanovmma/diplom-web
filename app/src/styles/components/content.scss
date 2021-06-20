@@ -88,6 +88,7 @@
             flex-grow: 1;
         }
         &__text{
+            text-decoration: none;
             font-family: $mont;
             font-weight: 500;
             line-height: 25px;

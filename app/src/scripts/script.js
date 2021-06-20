@@ -1,3 +1,7 @@
+function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'uz'}, 'google_translate_element');
+  }
+
 // nav link
 const links = document.querySelectorAll('.nav__link');
 const pages = document.querySelectorAll('.page');
