@@ -1,6 +1,6 @@
 section.kafedra#history
  .container
-  .kafedra__block
+  .kafedra__block(data-aos="fade-up")
    h2.kafedra__title “Transportda axborot tizimlari va texnologiyalari” kafedrasi
    .kafedra__info 
     p.kafedra__text Kafedra 1966-yili iqtisodiyot muhandisligi fakulteti tarkibida tashkil etilgan bo’lib, uning dastlabki nomi “Hisoblash texnikasi, boshqaruv va matematik metodlarni rejalashtirish” bo’lgan. Kafedraga 1966-1976 yillari Sh.S.Karimov, 1976-1980 yillari Pechnikov A.V. , 1981-2010 yillari Aliev M.M.,  2010-yildan boshlab hozirgi vaqtgacha Rasulmuxammedov M.M. rahbarlik vazifalarini bajarishgan.
@@ -12,32 +12,36 @@ section.kafedra#history
     p.kafedra__text Yo’nalish nomi <span class="kafedra__span">5523200-AT</span> hozirda kafedrada yetuk mutaxassislar faoliyat olib bormoqdalar. 
     p.kafedra__text Kafedra <span class="kafedra__span">B5523200 (“Axborot tizmalari”)</span>, <span class="kafedra__span">5521900 va 5330200 (“Informatika va axborot texnologiyalari”)</span> yo`nilishi bo`yicha mutaxassis tayyorlaydi, 17 fan bo`yicha mashg`ulotlar bo`yicha olib boriladi, zamonaviy dasturlash texnologiyalari, quyi va yuqori darajadagi tillar, internet texnologiyalari, tarmoq texnologiyalari va tarmoqni tashkillashtirish, axborot xavfsizligi, temir yo`l transportida axborot texnologiyalari va x.k.
   .kafedra__dirs
-    .kafedra__dir
+    .kafedra__dir(data-aos="zoom-out-right")
      h2.title Bakalavriat:
      .kafedra__dir-info
       .kafedra__dir-info__title 5330200     Axborot tizimlari va texnologiyalari (transportda)
       each bachelor in [' Аxborot texnologiyalari va jarayonlarni matematik modella', 'Tizimli dasturiy taʼminot', 'Dasturlash tillari va texnologiyalari   (C#, Python)', 'Elektronika asoslari', 'raqamli texnika va mikroprotsessorlar', 'Maʼlumotlar va bilimlar banki', 'Multimedia tizimlari va   texnologiyalari', 'Sonli usullar va MatLab tizimida dasturlash', 'Аxborot xavfsizligi va axborotni himoyalash', 'Korporativ axborot tizimlari',   'WEB-texnologiyalari', 'Temir yoʼl transportida axborot tizimlari', 'Temir yoʼl transportida intellektual axborot tizimlari va ularni loyihalash',   'Kompyuter tarmoqlari va tarmoq texnologiyalari', 'Obyektga yoʼnaltirilgan dasturlash tili (Java, Android)', 'Operatsion tizimlar']
         li.kafedra__dir-info__list= bachelor
-    .kafedra__dir
+  
+    .kafedra__dir(data-aos="zoom-out-left")
      h2.title Magistatura:
      .kafedra__dir-info
       .kafedra__dir-info__title 5А330204 Axborot  texnologiyalari (sohalar bo’yicha)
       each magistr in ['Soʼrov metodologiyasi asoslari', 'Temir yoʼl transportida geoinformatsion tizimlar', 'Tizimlarni tahlil qilish va maʼlumotlar   bazasini loyixalash', 'Web dasturlash va loyihalashtirish', 'Obyektga moʼljallangan dasturlash va toʼplam axborotlarni loyihalashtirish', 'Temir yoʼl   tarmogʼida aqlli transport tizimlari', 'Temir yoʼl transportidagi xatarlarni boshqarish texnologiyalari']
         li.kafedra__dir-info__list= magistr
   h2.title Statistika
-  .statistic
+  .statistic(data-aos="flip-down" onload="load()")
     .statistic-block
      .statistic__learn
       i.fad.statistic__icon1
       p.statistic__text O’quv jarayonidagi talabalar soni
-      p.statistic__num 500
+      p.statistic__num
+       span(id='value1') 564
     .statistic-block
      .statistic__learn
       i.fad.statistic__icon2
       p.statistic__text Bitiruvchi talabalar soni
-      p.statistic__num 500
+      p.statistic__num
+       span(id='value2') 10153
     .statistic-block
      .statistic__learn
       i.fad.statistic__icon3
-      p.statistic__text Bitirgan talabalar soni
-      p.statistic__num 500
+      p.statistic__text Jami
+      p.statistic__num 
+       span(id='value3') 10717
