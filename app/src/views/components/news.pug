@@ -1,4 +1,4 @@
-section.news#news
+section.news.sections-body#news
  .container
   h2.title YANGILIKLAR
   .news-block(data-aos="fade-up") 
@@ -11,7 +11,7 @@ section.news#news
      p.news-block__date 20-06-2021
      p.news-block__time 12:30
     p.news-block__text Yunesko ishlar bo’yicha O’zbekiston Respublikasi Milliy komissiyasining ma’lumotiga ko’ra 2021-yil uchun “Barchni qarab oluvchi (inklyuziv) masofaviy va qaramli savodxonlik” mavzusiga bag’ishlangan.
-    button.link__hover.news-block__btn ba’tafsil
+    button.link__hover.news-block__btn(id="myBtn") ba’tafsil
   .news-block(data-aos="fade-up") 
    .news-block__images
     img(src="images/new_1.webp", alt="kafedra yangiliklari").news-block__image
@@ -22,7 +22,7 @@ section.news#news
      p.news-block__date 20-06-2021
      p.news-block__time 12:30
     p.news-block__text Yunesko ishlar bo’yicha O’zbekiston Respublikasi Milliy komissiyasining ma’lumotiga ko’ra 2021-yil uchun “Barchni qarab oluvchi (inklyuziv) masofaviy va qaramli savodxonlik” mavzusiga bag’ishlangan.
-    button.link__hover.news-block__btn ba’tafsil
+    button.link__hover.news-block__btn(id="myBtn") ba’tafsil
   .news-block(data-aos="fade-up") 
    .news-block__images
     img(src="images/new_1.webp", alt="kafedra yangiliklari").news-block__image
@@ -33,7 +33,12 @@ section.news#news
      p.news-block__date 20-06-2021
      p.news-block__time 12:30
     p.news-block__text Yunesko ishlar bo’yicha O’zbekiston Respublikasi Milliy komissiyasining ma’lumotiga ko’ra 2021-yil uchun “Barchni qarab oluvchi (inklyuziv) masofaviy va qaramli savodxonlik” mavzusiga bag’ishlangan.
-    button.link__hover.news-block__btn ba’tafsil
+    button.link__hover.news-block__btn(id="myBtn") ba’tafsil
+  .modal(id="myModal")
+   .modal-content
+    span.close &times;
+    h5.modal-block__title
+    .modal-block__text
   .pagination 
    ul.pagination__ul
     li.pagination__prev.btn

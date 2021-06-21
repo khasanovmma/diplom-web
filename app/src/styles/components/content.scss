@@ -37,6 +37,8 @@
     }
     &__title{
         height: 45px;
+        text-align: center;
+        text-transform: uppercase;
         font-family: $mont;
         font-weight: 700;
         color: var(--blue);

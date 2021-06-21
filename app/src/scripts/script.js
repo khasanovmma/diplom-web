@@ -1,8 +1,64 @@
 setTimeout(() => {
     let option = document.querySelector('option')
     option.innerHTML = 'Tilni o\'zgartirish'
+    
 
-}, 350);
+}, 1500);
+
+window.addEventListener('scroll', () => {
+	let scrollDistance = window.scrollY;
+
+	if (window.innerWidth > 768) {
+		document.querySelectorAll('.sections-body').forEach((el, i) => {
+			if (el.offsetTop - document.querySelector('.nav').clientHeight <= scrollDistance) {
+				document.querySelectorAll('.nav a').forEach((el) => {
+					if (el.classList.contains('active')) {
+						el.classList.remove('active');
+					}
+				});
+
+				document.querySelectorAll('.nav li')[i].querySelector('a').classList.add('active');
+			}
+		});
+	}
+});
+// Get the modal
+var modal = document.querySelector('.modal');
+var bd = document.querySelector('body');
+var modalTitle = document.querySelector('.modal-block__title');
+var modalContent = document.querySelector('.modal-block__text');
+var newsTitle = document.querySelectorAll('.news-block__title');
+var newsContent = document.querySelectorAll('.news-block__text');
+
+// Get the button that opens the modal
+var btn = document.querySelectorAll("#myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+
+for(let i=0; i < btn.length; i++) {
+    btn[i].addEventListener('click', ()=> {
+        console.log(modalTitle.innerHTML);
+        modal.style.display = "block";
+        bd.style.overflow = 'hidden';
+        modalTitle.innerHTML = newsTitle[i].innerHTML
+        modalContent.innerHTML = newsContent[i].innerHTML
+    })
+}
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+    bd.style.overflow = 'auto';
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
 
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({ pageLanguage: 'uz' }, 'google_translate_element');

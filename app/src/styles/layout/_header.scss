@@ -4,6 +4,9 @@
     background: var(--blue);
     height: 86px;
     padding: 13px 0;
+    @include media($md){
+        height: 120px;
+    }
 }
 .nav__top{
     display: flex;
@@ -18,6 +21,9 @@
         font-weight: 700;
         font-size: 20px;
         color: white;
+        @include media($md){
+            text-align: center;
+        }
     }
     &__lg{
         height: 34px;
@@ -151,7 +157,7 @@
         }
     }
     &__items{
-        padding: 20px 25px;
+        padding: 20px 20px;
         background: #fff;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.08);
         
