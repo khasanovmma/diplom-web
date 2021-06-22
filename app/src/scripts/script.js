@@ -1,26 +1,52 @@
 setTimeout(() => {
     let option = document.querySelector('option')
     option.innerHTML = 'Tilni o\'zgartirish'
-    
+
 
 }, 1500);
 
+let link = document.querySelectorAll('.pagination__a')
+
+	let newsBox = document.querySelector('.news__box')
+
+   for (let i=0; i<link.length; i++) {
+   link[i].addEventListener('click', (e)=> {
+	    e.preventDefault()
+	    newsBox.remove()
+	    get = e.target.getAttribute("href")
+	    fetch(`http://127.0.0.1:8000/${get}`)
+        .then((response) => {
+            return response.text();
+        })
+        .then((data) => {
+           let div = document.querySelector('.news .container .title')
+           let parsedResponse = (new window.DOMParser()).parseFromString(data, "text/html");
+        setTimeout(() => {
+        let newsBox = document.querySelectorAll('.news__box')
+        newsBox[1].remove()
+        }, 100);
+           let newBox = parsedResponse.querySelector('.news__box')
+           div.after(newBox)
+        });
+	    })
+
+}
 window.addEventListener('scroll', () => {
-	let scrollDistance = window.scrollY;
+    let scrollDistance = window.scrollY;
 
-	if (window.innerWidth > 768) {
-		document.querySelectorAll('.sections-body').forEach((el, i) => {
-			if (el.offsetTop - document.querySelector('.nav').clientHeight <= scrollDistance) {
-				document.querySelectorAll('.nav a').forEach((el) => {
-					if (el.classList.contains('active')) {
-						el.classList.remove('active');
-					}
-				});
+    if (window.innerWidth > 768) {
+        document.querySelectorAll('.sections-body').forEach((el, i) => {
+            if (el.offsetTop - document.querySelector('.nav').clientHeight <= scrollDistance) {
+                document.querySelectorAll('.nav a').forEach((el) => {
+                    if (el.classList.contains('active')) {
+                        el.classList.remove('active');
+                    }
+                });
 
-				document.querySelectorAll('.nav li')[i].querySelector('a').classList.add('active');
-			}
-		});
-	}
+                document.querySelectorAll('.nav li')[i].querySelector('a').classList.add('active');
+            }
+        });
+    }
 });
 // Get the modal
 var modal = document.querySelector('.modal');
@@ -38,8 +64,9 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 
-for(let i=0; i < btn.length; i++) {
-    btn[i].addEventListener('click', ()=> {
+
+for (let i = 0; i < btn.length; i++) {
+    btn[i].addEventListener('click', () => {
         console.log(modalTitle.innerHTML);
         modal.style.display = "block";
         bd.style.overflow = 'hidden';
@@ -48,13 +75,13 @@ for(let i=0; i < btn.length; i++) {
     })
 }
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
     modal.style.display = "none";
     bd.style.overflow = 'auto';
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
