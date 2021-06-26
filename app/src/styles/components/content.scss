@@ -56,6 +56,7 @@
     }
     &__text{
         font-family: $mont;
+        text-transform: capitalize;
         text-align: center;
         font-weight: 500;
         line-height: 25px;
@@ -77,12 +78,14 @@
             line-height: 25px;
             color: var(--black);
             text-decoration: none;
+            text-transform: capitalize;
         }
     }
     &__mail{
         width: 250px;
         height: 100%;
         box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.08);
+        text-transform: lowercase;
         @include media($lg){
             width: 100%;
         }

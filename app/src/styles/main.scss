@@ -23,7 +23,7 @@ body {
 }
 
 .link__hover.active {
-    color: #ffae00f6;
+    color: #ffae00f6 !important;
 }
 .link__hover.active::before {
     left: 0;
@@ -31,35 +31,85 @@ body {
     width: 100%;
 }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+
+.modal, .modal-contact {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%;
+    height: 100%; 
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4); 
 }
-
-/* Modal Content/Box */
+.modal-content{
+    display: flex;
+    flex-direction: column;
+}
 .modal-content {
     background: #FFFFFF;
     box-shadow: 2px -2px 15px rgba(103, 135, 217, 0.12);
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 8% auto; 
     padding: 20px;
     border: 1px solid #888;
-    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 5px;
+    width: 55%;
+    height: 65%; 
 }
-
+.modal-contact .modal-content {
+    background: #FFFFFF;
+    box-shadow: 2px -2px 15px rgba(103, 135, 217, 0.12);
+    margin: 20% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 5px;
+    width: 20%;
+    height: 25%; 
+}
+.modal .modal-block__title {
+    text-align: center;
+    text-transform: capitalize !important;
+}
+.modal-content .modal-block__title {
+    text-align: center;
+    text-transform: none;
+}
+img.contact {
+    width: 50px;
+    margin: 0;
+}
+.pagination__a {
+    height: 100%;
+    text-decoration: none;
+    color: var(--blue);
+}
+.pagination__num.active .p__a {
+color: #fff;
+}  
+.pagination__num.active .pagination__a {
+    color: #fff;
+}
+.pagination__num:hover .p__a {
+    color: #fff;
+}  
+.pagination__num:hover .pagination__a {
+    color: #fff;
+}
+.p__a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: var(--blue);
+    text-decoration: none;
+}
 /* The Close Button */
 .close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
+    align-self: flex-end;
 }
 
 .close:hover,

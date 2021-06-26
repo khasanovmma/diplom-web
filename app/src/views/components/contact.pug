@@ -9,4 +9,11 @@ section.contact.sections-body#contact
     input(type="email", name="" placeholder="Email po'chta").contact__input
     textarea(name="", cols="30", rows="10" placeholder="Taklif va iltimoslar").contact__textarea
     button.contact__button
-     a(href="#!").link__hover.contact__link Xabar yuborish
+     a(href="#!" id="contactBtn").link__hover.contact__link Xabar yuborish
+  .modal-contact(id="contactModal")
+   .modal-content
+    span.close &times;
+    .content-center
+     h5.modal-block__title 
+      img.contact(src="images/png-clipart.webp", alt="ok")
+     h5.modal-block__title Qabul qilindi.
