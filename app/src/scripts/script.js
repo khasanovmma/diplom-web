@@ -12,7 +12,7 @@ for (let i = 0; i < link.length; i++) {
         e.preventDefault();
         newsBox.remove();
         get = e.target.getAttribute("href");
-        fetch(`http://127.0.0.1:8000/${get}`)
+        fetch(`${location.href}${get}`)
             .then((response) => {
                 return response.text();
             })
@@ -74,14 +74,14 @@ window.addEventListener("scroll", () => {
 
     }
 });
-// Get the modal
+
 let modal = document.querySelector(".modal");
 let html = document.querySelector("html");
 let modalTitle = document.querySelector(".modal-block__title");
 let modalContent = document.querySelector(".modal-block__text");
 let newsTitle = document.querySelectorAll(".news-block__title");
 let newsContent = document.querySelectorAll(".news-block__text");
-
+let overflow = document.querySelectorAll('.modal-block__text')
 let btn = document.querySelectorAll("#myBtn");
 let span = document.getElementsByClassName("close")[0];
 
@@ -90,6 +90,7 @@ for (let i = 0; i < btn.length; i++) {
         console.log(modalTitle.innerHTML);
         modal.style.display = "block";
         html.style.overflow = "hidden";
+        overflow[i].style = `max-height: max-content;`
         modalTitle.innerHTML = newsTitle[i].innerHTML;
         modalContent.innerHTML = newsContent[i].innerHTML;
     });
@@ -98,12 +99,18 @@ for (let i = 0; i < btn.length; i++) {
 span.onclick = function () {
     modal.style.display = "none";
     html.style.overflow = "auto";
+    for (let i = 0; i < btn.length; i++) {
+    overflow[i].style = `max-height: 15px;`
+    }
 };
 
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
         html.style.overflow = "auto";
+        for (let i = 0; i < btn.length; i++) {
+        overflow[i].style = `max-height: 15px;`
+        }
     }
 };
 let modalContact = document.querySelector(".modal-contact");
